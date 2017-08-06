@@ -12,6 +12,13 @@ csv({
     trim: true
 }).fromFile(csvFilePath)
     .on('json', (jsonObj) => {
+        var website = jsonObj.WEBSITE;
+        if (website.startsWith('http:\\') || website.startsWith('http.//')) {
+            jsonObj.WEBSITE = website.substring(7);
+        }
+        if (website.startsWith('http//') || website.startsWith('http:/' || website.startsWith('http: '))) {
+            jsonObj.WEBSITE = website.substring(6);
+        }
         try {
             var line = JSON.stringify(jsonObj, null, 2);
             if (lines > 0) {
@@ -25,5 +32,4 @@ csv({
     })
     .on('done', (error) => {
         fs.appendFile('./data/data.json', ']', () => { });
-        console.log('end')
     });
