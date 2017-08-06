@@ -1,7 +1,7 @@
 var _ = require('lodash');
 var express = require('express');
 var app = express();
-var data = require('./data/data.json');
+var data = require('./data/data_sm.json');
 var ntee = require('./data/ntee.json');
 
 app.use('/', express.static('dist'));
@@ -12,11 +12,15 @@ app.get('/data', function (req, res) {
     var city = req.query.city;
     var ntee = req.query.ntee;
     var nteeSub = req.query.nteeSub;
+    var minBudget = req.query.minBudget;
+    var maxBudget = req.query.maxBudget;
     res.send(_.filter(data, d => {
         return (!state || d.STATE === state)
             && (!city || d.CITY === city)
             && (!nteeSub || d.NteeFinal === nteeSub)
-            && (!ntee || d.NteeFinal.charAt(0) === ntee);
+            && (!ntee || d.NteeFinal.charAt(0) === ntee)
+            && (!minBudget || d.GROSSRECEIPTS >= minBudget)
+            && (!maxBudget || d.GROSSRECEIPTS <= maxBudget);;
     }));
 });
 

@@ -7,6 +7,20 @@ body {
     margin: 20px;
 }
 
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sorters {
+        display: flex;
+
+        .filter {
+            margin: 0 10px;
+        }
+    }
+}
+
 .filters {
     display: flex;
     justify-content: flex-start;
