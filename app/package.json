@@ -1,0 +1,42 @@
+{
+    "name": "form990",
+    "version": "0.0.1",
+    "description": "Project Form990",
+    "main": "./src/index.tsx",
+    "scripts": {
+        "build": "webpack",
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@types/immutable": "^3.8.7",
+        "@types/lodash": "^4.14.71",
+        "@types/node": "^7.0.10",
+        "@types/react": "^15.0.18",
+        "@types/react-dom": "^0.14.23",
+        "axios": "^0.16.2",
+        "csvtojson": "^1.1.7",
+        "express": "^4.15.2",
+        "firebase": "^4.2.0",
+        "foundation-sites": "^6.3.1",
+        "immutable": "^3.8.1",
+        "lodash": "^4.17.4",
+        "react": "^15.4.2",
+        "react-dom": "^15.4.2"
+    },
+    "devDependencies": {
+        "awesome-typescript-loader": "^3.1.2",
+        "copy-webpack-plugin": "^4.0.1",
+        "css-loader": "^0.27.3",
+        "exports-loader": "^0.6.4",
+        "extract-text-webpack-plugin": "^2.1.0",
+        "node-sass": "^4.5.1",
+        "sass-loader": "^6.0.3",
+        "source-map-loader": "^0.2.0",
+        "style-loader": "^0.16.0",
+        "typescript": "^2.2.1",
+        "typings": "^2.1.0",
+        "webpack": "^2.3.1"
+    }
+}

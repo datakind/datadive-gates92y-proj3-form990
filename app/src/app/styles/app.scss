@@ -1,0 +1,28 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+}
+
+.app {
+    margin: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: flex-start;
+
+    .filter {
+        min-width: 100px;
+        padding-right: 10px;
+    }
+}
+
+.apply-btn {
+    width: 100px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: #0078d7;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
