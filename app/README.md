@@ -2,6 +2,7 @@
 
 ```
 npm install
+node csv-to-json.js     # convert CSV to JSON
 npm run build
 npm start
 ```
